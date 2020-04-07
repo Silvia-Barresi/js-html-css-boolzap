@@ -1,0 +1,68 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* debug left side*/
+
+.headerleft, .notification, .searchchat{
+  border: 2px solid #000;
+  height: 10%;
+}
+
+.chatcontacts{
+  height:70%;
+}
+.contact{
+  border: 2px solid #000;
+  height: 20%;
+}
+
+/* fine debug left side*/
+
+/* debug right side */
+
+.headerright, .footerright{
+  border: 2px solid #000;
+  position: fixed;
+  overflow: hidden;
+  height: 69px;
+  width: 49.8vw;
+}
+
+.mainchat{
+  border: 2px solid #000;
+  margin-top: 69px;
+  height: calc(100% - 69px - 69px);
+  overflow-y: scroll;
+}
+
+/* fine debug right side */
+
+.left, .right{
+  border: 2px solid #000;
+  height:92vh;
+  margin-top: 1.5%;
+}
+
+.left{
+  width:30vw;
+}
+
+.right{
+  width:50vw;
+}
+
+.chatcontacts{
+  overflow-y: scroll;
+}
