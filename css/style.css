@@ -5,53 +5,56 @@
 }
 
 
-body{
+.container{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(to bottom, #128c7e 0%, #128c7e 10%, #ece5dd 10%, #e3e1de 100%);
 }
 
 /* debug left side*/
 
-.headerleft, .notification, .searchchat{
-  border: 2px solid #000;
-  height: 10%;
+.headerleft{
+  height: 70px;
 }
 
-.chatcontacts{
-  height:70%;
+.notification{
+  height: 12%;
 }
-.contact{
-  border: 2px solid #000;
-  height: 20%;
+
+.headerleft,.headerright,.footerright,.searchchat{
+  background-color: #EAEAEA;
+  border: 1px solid #e0e0e0;
 }
+
+
 
 /* fine debug left side*/
 
 /* debug right side */
 
 .headerright, .footerright{
-  border: 2px solid #000;
   position: fixed;
   overflow: hidden;
-  height: 69px;
-  width: 49.8vw;
-}
-
-.mainchat{
-  border: 2px solid #000;
-  margin-top: 69px;
-  height: calc(100% - 69px - 69px);
-  overflow-y: scroll;
+  height: 70px;
+  width: 50vw;
 }
 
 /* fine debug right side */
 
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .left, .right{
-  border: 2px solid #000;
-  height:92vh;
+  height:90vh;
   margin-top: 1.5%;
 }
 
@@ -63,6 +66,163 @@ body{
   width:50vw;
 }
 
+/* leftside------------------------------------------------------------------ */
+
+/* headerleft ---------- */
+
+img{
+  width: 15%;
+  border-radius: 100%;
+  margin-left: 2%
+}
+
+.icon a{
+  margin-right: 30%;
+}
+.icon{
+  margin-right: 5%;
+}
+
+i{
+  color: #B1B1B1;
+  font-size: 20px;
+}
+
+/* notification----------------------------------- */
+
+.notification{
+  background-color: #8EDAFC;
+  /* padding: 3% 28% 0 5%; */
+}
+
+.fa-bell-slash{
+  background-color: #ffff;
+  border-radius: 100%;
+  color: #8EDAFC;
+  padding:4% 3%;
+  margin: 2% 0 0 4%;
+}
+.note{
+  float: right;
+  margin: 4% 25% 0 0;
+}
+
+h2{
+  font-size: 15px;
+}
+
+p{
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* search----------------------------------------------------------------- */
+
+.searchchat{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+label{
+  background-color: #fff;
+  margin: 1% 0;
+  padding: 1.5% 0 1.5% 3%;
+  width: 98%;
+}
+
+input{
+  margin: 1% 1% 1% 0;
+  border: none;
+  padding-right: 56%;
+}
+
+/* contacts------------------------------------------------------------------ */
+
 .chatcontacts{
+  height:calc(100% - 70px - 12% - 7%);
   overflow-y: scroll;
 }
+
+.contact{
+  height: 80px;
+  background-color:#f5f5f5;
+  border: 1px solid #e0e0e0;
+}
+
+.contact p, .michele p{
+  text-decoration: none;
+}
+
+#grey{
+  background-color: #eaeaea;
+}
+
+.contact img{
+  width: 14%;
+  margin-top: 1%;
+}
+
+.nomi{
+  float:right;
+  margin: 4% 40% 0 0;
+}
+
+
+/* fine leftside */
+
+/* right side----------------------------------------------------------------*/
+
+.contactright img{
+  width: 55%;
+  margin-left: 10%;
+}
+
+.michele{
+  width: 700px;
+  margin-right: 52%;
+}
+
+/* mainchat----------------------------------------------------------------- */
+
+.mainchat{
+  background-image: url("img/sfondo.jpg");
+  margin-top: 70px;
+  height: calc(100% - 70px - 70px);
+  overflow-y: scroll;
+}
+
+.greenmessage{
+  background-color: #dcf8c6;
+  padding: 2%;
+  margin: 4% 10% 2% 65%;
+  border-radius: 10px;
+}
+
+.whitemessage{
+  background-color: #ffff;
+  padding: 2%;
+  margin: 2% 65% 2% 10%;
+  border-radius: 10px;
+}
+
+/* footerright-------------------------------------------------------------- */
+
+.footerright input{
+  padding: 2% 60% 2% 1%;
+}
+
+.fa-smile{
+  color:#505050;
+}
+.fa-paper-plane{
+  color:#505050;
+  margin-right: 4%;
+}
+/*
+.newtext{
+  display: none;
+} */
+
+/* fine right side */
