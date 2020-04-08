@@ -53,8 +53,7 @@
 }
 
 .left, .right{
-  height:90vh;
-  margin-top: 1.5%;
+  height:95vh;
 }
 
 .left{
@@ -127,20 +126,19 @@ p{
 label{
   background-color: #fff;
   margin: 1% 0;
-  padding: 1.5% 0 1.5% 3%;
-  width: 98%;
+  padding: 1.5% 0 1.5% 5%;
 }
 
 input{
   margin: 1% 1% 1% 0;
   border: none;
-  padding-right: 56%;
+  padding-right: 52%;
 }
 
 /* contacts------------------------------------------------------------------ */
 
 .chatcontacts{
-  height:calc(100% - 70px - 12% - 7%);
+  height:calc(100% - 70px - 12% - 7.3%);
   overflow-y: scroll;
 }
 
@@ -165,7 +163,7 @@ input{
 
 .nomi{
   float:right;
-  margin: 4% 40% 0 0;
+  margin: 6% 40% 0 0;
 }
 
 
