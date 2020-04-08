@@ -52,6 +52,9 @@ $(document).ready(function(){
           $(this).show();
         }else{
           $(this).hide();
+
+        // input vuoto
+         $('input').val('');
         }
 
     });
