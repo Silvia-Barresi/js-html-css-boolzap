@@ -125,20 +125,23 @@ p{
 
 label{
   background-color: #fff;
-  margin: 1% 0;
-  padding: 1.5% 0 1.5% 5%;
+  margin: 1% 0 1% 1%;
+  padding: 1.5%;
 }
 
 input{
   margin: 1% 1% 1% 0;
   border: none;
-  padding-right: 52%;
+}
+
+input[type="text"]{
+  width: 100%;
 }
 
 /* contacts------------------------------------------------------------------ */
 
 .chatcontacts{
-  height:calc(100% - 70px - 12% - 7.3%);
+  height:calc(100% - 70px - 12% - 7%);
   overflow-y: scroll;
 }
 
@@ -152,7 +155,7 @@ input{
   text-decoration: none;
 }
 
-#grey{
+.active{
   background-color: #eaeaea;
 }
 
@@ -166,8 +169,6 @@ input{
   margin: 6% 40% 0 0;
 }
 
-
-/* fine leftside */
 
 /* right side----------------------------------------------------------------*/
 
@@ -204,22 +205,35 @@ input{
   border-radius: 10px;
 }
 
+ul{
+  position: absolute;
+  list-style-type: none;
+  background-color: #ffff;
+  font-size: 12px;
+  padding: 1%;
+  line-height: 2;
+}
+
+
+
 /* footerright-------------------------------------------------------------- */
 
-.footerright input{
-  padding: 2% 60% 2% 1%;
+.footerright input[type="text"]{
+  width:100%;
 }
 
-.fa-smile{
+.footerright input{
+  padding: 1.5%;
+  margin: 0 4%;
+}
+
+.fa-smile, .fa-paper-plane{
   color:#505050;
 }
-.fa-paper-plane{
-  color:#505050;
-  margin-right: 4%;
+
+.footerright{
+  padding: 2%;
 }
-/*
-.newtext{
-  display: none;
-} */
+
 
 /* fine right side */

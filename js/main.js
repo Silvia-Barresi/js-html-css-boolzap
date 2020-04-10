@@ -5,7 +5,7 @@ $(document).ready(function(){
 
  var text = $('.mainchat');
  var send = $('.fa-paper-plane');
- var search =$('.fa-search')
+ // var search =$('.fa-search')
 
 
  send.click(
@@ -14,12 +14,12 @@ $(document).ready(function(){
      // valore input
      var userSend = $('#mytext').val();
      // stampo il messaggio
-     text.append('<div class="greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i></div>');
+     text.append('<div class="message greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i></div>');
      // input vuoto
      $('input').val('');
      // dopo un secondo arriva la risposta automatica
      setTimeout(function(){
-       text.append('<div class="whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i></div>');
+       text.append('<div class="message whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i></div>');
      }, 1000);
 
    }
@@ -37,36 +37,71 @@ $(document).ready(function(){
 
   // ricerca tra i contatti con click su search
 
-  search.click(
-    function(){
-      // salvo l'input
-      var searchcontacts = $('#friendinput').val().toLowerCase();
 
-      // ciclo tra i contatti
-      $('.contact').each(function(){
-        // salvo il valore del testo
-        var myFriend = $(this).find('h2').text().toLowerCase();
+      $('#friendinput').keyup(function(){
 
-        // se il contatto esiste lo mostro e nascondo gli altri
-        if(myFriend.includes(searchcontacts)){
-          $(this).show();
-        }else{
-          $(this).hide();
+        var searchcontacts = $(this).val().toLowerCase();
 
-        // input vuoto
-         $('input').val('');
-        }
+          $('.contact').each(function(){
 
-    });
+          var myFriend = $(this).find('h2').text().toLowerCase();
 
-    }
-  )
-      // cliccando sulla tastiera trova la chat
-        $('.container').keypress(function(enter) {
-        if ( enter.which == 32 ) {
-        search.click();
-        }
-        });
+          if(myFriend.includes(searchcontacts)){
+              $(this).show();
+          }else{
+             $(this).hide();
+           }
+         });
+
+       });
+
+  // search.click(
+  //   function(){
+  //     // salvo l'input
+  //     var searchcontacts = $('#friendinput').val().toLowerCase();
+  //
+  //     // ciclo tra i contatti
+  //     $('.contact').each(function(){
+  //       // salvo il valore del testo
+  //       var myFriend = $(this).find('h2').text().toLowerCase();
+  //
+  //       // se il contatto esiste lo mostro e nascondo gli altri
+  //       if(myFriend.includes(searchcontacts)){
+  //         $(this).show();
+  //       }else{
+  //         $(this).hide();
+  //   });
+  //
+  //   }
+  // );
+
+      // cancello il messaggio dal menu a tendina
+
+        // nascondo il menu a tendina
+        $('.deletemenu').hide();
+
+        // al click spunta il menù e al click lo nascondo nuovamente
+
+        $('.message').on('click','.fa-chevron-down',
+            function(){
+
+              var menuShow = $(this).siblings('.deletemenu');
+              // se fratello menu è nascosto mostralo
+              if (menuShow.is(':hidden')){
+                menuShow.show();
+              // altrimenti nascondilo
+              }else{
+                menuShow.hide();
+              }
+
+            });
+
+        // cancello il messaggio cliccando sull'opzione dal menu a tendina
+        $('.mainchat').on('click', '.delete',
+            function(){
+        // rimuovi tutta la famiglia del menu a tendina
+              $(this).parents('.message').remove();
+            });
 
 
 
@@ -75,6 +110,3 @@ $(document).ready(function(){
 
 
 });
-
-
-// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
