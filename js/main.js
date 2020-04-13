@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 // variabili milestone 1
- var text = $('.mainchat.active');
+ var text = $('.mainchat');
  var send = $('.fa-paper-plane');
 
  var today = new Date();
@@ -27,9 +27,9 @@ $(document).ready(function(){
 
        // inserisci l'orario dell'ultima visualizzazione e il messaggio sta scrivendo..
        // $('.imchattingwith > p').text('Sta scrivendo...');
-<<<<<<< HEAD
-=======
-       // $('.contact > span.hour').text(time);
+
+
+
     });
 
 
@@ -147,12 +147,8 @@ $(document).ready(function(){
         $('.mainchat').removeClass('active').addClass('ghost');
         $('.mainchat').eq(chat).removeClass('ghost').addClass('active');
 
-<<<<<<< HEAD
-        
+        $('.contact > span').text(time);
 
-=======
-        $('.contact > span.hour').text(time);
->>>>>>> 027f56eef84050916bc7af4d9b7e36e9fbaf1e17
               // ALTERNATIVA MAINCHAT DATA
 
               // salvo la conversazione che mi interessa attraverso l'attributo data
