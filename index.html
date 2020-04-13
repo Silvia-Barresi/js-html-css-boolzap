@@ -40,61 +40,69 @@
 
         <div class="chatcontacts">
 
-          <div class="contact active">
-            <a href="#"><img src="img/musi/av2.jpg" alt=""></a>
+          <div class="contact active flex" data-chat="0">
+            <img src="img/musi/av2.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Michele</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
-          <div class="contact">
-            <a href="#"><img src="img/musi/av3.jpg" alt=""></a>
+          <div class="contact flex" data-chat="1" >
+            <img src="img/musi/av3.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Fabio</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
-          <div class="contact">
-            <a href="#"><img src="img/musi/av4.jpg" alt=""></a>
+          <div class="contact flex" data-chat="2" >
+            <img src="img/musi/av4.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Samuele</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
-          <div class="contact">
-            <a href="#"><img src="img/musi/av5.jpg" alt=""></a>
+          <div class="contact flex" data-chat="3">
+            <img src="img/musi/av5.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Alessandro B.</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
-          <div class="contact">
-            <a href="#"><img src="img/musi/ale.jpg" alt=""></a>
+          <div class="contact flex" data-chat="4">
+            <img src="img/musi/ale.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Alessandro F.</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
-          <div class="contact">
-            <a href="#"><img src="img/musi/claudia.jpg" alt=""></a>
+          <div class="contact flex" data-chat="5">
+            <img src="img/musi/claudia.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Claudia</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
-          <div class="contact">
-            <a href="#"><img src="img/musi/davide.jpg" alt=""></a>
+          <div class="contact flex" data-chat="6">
+            <img src="img/musi/davide.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Davide</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
-          <div class="contact">
-            <a href="#"><img src="img/musi/av9.jpg" alt=""></a>
+          <div class="contact flex" data-chat="7">
+            <img src="img/musi/av9.jpg" alt="">
             <div class="nomi">
               <h2 class="myfriend">Federico</h2>
               <p>Non poteva essere altrimenti</p>
             </div>
+            <span class="hour">15:40</span>
           </div>
         </div>
       </div>
@@ -107,7 +115,7 @@
           <div class="contactright">
             <a href="#"><img src="img/musi/av2.jpg" alt=""></a>
           </div>
-          <div class="michele">
+          <div class="imchattingwith">
             <h2>Michele</h2>
             <p>Ultimo accesso oggi alle 15.40</p>
           </div>
@@ -119,22 +127,12 @@
           </div>
 
         </div>
-        <div class="mainchat">
-
-          <div class="message greenmessage">
-            <span>Ciao, come stai?</span>
-            <i class="fas fa-chevron-down"></i>
-            <div class="deletemenu" type="hidden">
-              <ul>
-                <li>Info messaggio</li>
-                <li class="delete">Cancella messaggio</li>
-              </ul>
-            </div>
-          </div>
+        <div class="mainchat active" data-chat="0">
 
           <div class="message whitemessage">
-            <span>Molto bene</span>
+            <span>Hey</span>
             <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
             <div class="deletemenu">
               <ul>
                 <li>Info messaggio</li>
@@ -142,9 +140,21 @@
               </ul>
             </div>
           </div>
-          <div class="message whitemessage">
-            <span>Tu?</span>
+          <div class="message greenmessage">
+            <span>You talking to me?</span>
             <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message greenmessage">
+            <span>You talking to me?</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
             <div class="deletemenu">
               <ul>
                 <li>Info messaggio</li>
@@ -155,6 +165,289 @@
 
         </div>
 
+        <div class="mainchat ghost" data-chat="1">
+
+          <div class="message whitemessage">
+            <span>Adoro il fatto che, dopo aver passato una giornata con te, possa ancora sentire il tuo profumo sui miei vestiti.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message whitemessage">
+            <span>E adoro il fatto che tu sia l’ultima persona con la quale voglio parlare prima di addormentarmi la notte. </span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message whitemessage">
+            <span>Non è che mi senta solo, e non c’entra il fatto che sia Capodanno. Sono venuto qui stasera perchè quando ti rendi conto che vuoi passare il resto della tua vita con una persona, vuoi che il resto della tua vita inizi il prima possibile.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mainchat ghost" data-chat="2">
+
+          <div class="message greenmessage">
+            <span>Questa auto. Che cavolo significa? Dov'è la Cadillac? La Cadi? Dov'è la Cadi?</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message whitemessage">
+            <span>La che?</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message greenmessage">
+            <span>La Cadillac che avevamo una volta, la Bluesmobile.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mainchat ghost" data-chat="3">
+
+          <div class="message greenmessage">
+            <span>Doc, hai lasciato l'impianto acceso tutta la settimana.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message whitemessage">
+            <span>L'impianto? Ah, a proposito, non ti attaccare all'amplificatore. C'è una vaga possibilità di sovraccarico.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message greenmessage">
+            <span>Sì, ci starò attento.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mainchat ghost" data-chat="4">
+
+          <div class="message whitemessage">
+            <span>È un fatto importante, ancorché comunemente noto, che le apparenze molto spesso ingannano. Per esempio, sul pianeta Terra, l'uomo ha sempre pensato di essere la specie più intelligente del pianeta, quando invece era la terza. Secondi, in ordine di intelligenza, i delfini, i quali, alquanto singolarmente, erano a conoscenza da tempo dell'imminente distruzione del pianeta Terra. </span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message whitemessage">
+            <span>Avevano tentato più volte di avvertire l'umanità del pericolo, ma i loro segnali venivano interpretati come simpatici tentativi di colpire il pallone, o fischi per ottenere succulenti bocconcini. Così, alla fine, decisero di lasciare la Terra coi loro mezzi. </span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message whitemessage">
+            <span>L'ultimo messaggio in assoluto venne interpretato come un incredibilmente sofisticato tentativo di doppio salto mortale rovesciato nel cerchio fischiando l'inno americano. Ma in realtà il messaggio era questo: "Addio e grazie per tutto il pesce".</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mainchat ghost" data-chat="5">
+
+          <div class="message greenmessage">
+            <span>Morpheus, la linea era sotto controllo, non so come.</span>
+            <i class="fas fa-chevron-down"></i>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message whitemessage">
+            <span>Lo so. Hanno tagliato la hardline. Non c'è tempo: devi raggiungere un'altra uscita.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message greenmessage">
+            <span>Ho agenti alle costole?</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message whitemessage">
+            <span>Sì</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mainchat ghost" data-chat="6">
+
+          <div class="message greenmessage">
+            <span>Signori, benvenuti al Fight Club</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message whitemessage">
+            <span>Prima regola del Fight Club: non parlate mai del Fight Club.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message whitemessage">
+            <span>Seconda regola del Fight Club: non dovete parlare mai del Fight Club.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mainchat ghost" data-chat="7">
+
+          <div class="message greenmessage">
+            <span>Ciò che non si possiede né si conosce, non si può dare né insegnare ad altri.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message greenmessage">
+            <span>Nemmeno gli ignoranti amano la sapienza, né desiderano diventare sapienti</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="message greenmessage">
+            <span>Proprio in questo, difatti, l'ignoranza è insopportabile, nel credere da parte di chi non è né bello né eccellente, e neppure saggio, di essere adeguatamente dotato. Chi non ritiene di essere privo, dunque, non desidera ciò di cui non crede di aver bisogno.</span>
+            <i class="fas fa-chevron-down"></i>
+            <span class="hour">15:40</span>
+            <div class="deletemenu">
+              <ul>
+                <li>Info messaggio</li>
+                <li class="delete">Cancella messaggio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
 
         <div class="footerright flex">
           <a href="#"><i class="far fa-smile"></i></a>
@@ -165,14 +458,6 @@
       </div>
 
     </div>
-
-
-
-
-
-
-
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

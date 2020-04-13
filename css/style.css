@@ -22,9 +22,7 @@
   height: 70px;
 }
 
-.notification{
-  height: 12%;
-}
+
 
 .headerleft,.headerright,.footerright,.searchchat{
   background-color: #EAEAEA;
@@ -68,6 +66,7 @@
 
 /* headerleft ---------- */
 
+
 img{
   width: 15%;
   border-radius: 100%;
@@ -82,15 +81,16 @@ img{
 }
 
 i{
-  color: #B1B1B1;
   font-size: 20px;
 }
 
 /* notification----------------------------------- */
 
+
 .notification{
   background-color: #8EDAFC;
-  /* padding: 3% 28% 0 5%; */
+  height: 85px;
+  padding-top: 1%;
 }
 
 .fa-bell-slash{
@@ -98,11 +98,13 @@ i{
   border-radius: 100%;
   color: #8EDAFC;
   padding:4% 3%;
-  margin: 2% 0 0 4%;
+  margin: 2% 0 2% 4%;
 }
+
 .note{
   float: right;
-  margin: 4% 25% 0 0;
+  margin: 4% 28% 0 0;
+  line-height: 1.5;
 }
 
 h2{
@@ -123,10 +125,14 @@ p{
   justify-content:center;
 }
 
+.searchchat i{
+  font-size: 15px;
+}
+
 label{
   background-color: #fff;
   margin: 1% 0 1% 1%;
-  padding: 1.5%;
+  padding: 1.5% 4%;
 }
 
 input{
@@ -151,7 +157,7 @@ input[type="text"]{
   border: 1px solid #e0e0e0;
 }
 
-.contact p, .michele p{
+.contact p, .imchattingwith p{
   text-decoration: none;
 }
 
@@ -159,16 +165,30 @@ input[type="text"]{
   background-color: #eaeaea;
 }
 
+.contact:hover{
+  background-color: #eaeaea;
+}
+
 .contact img{
   width: 14%;
-  margin-top: 1%;
 }
 
 .nomi{
-  float:right;
-  margin: 6% 40% 0 0;
+  width:80%;
+  margin-left: 2%;
+  line-height: 1.5;
 }
 
+.contact p, .hour, i{
+  color:#B1B1B1;
+}
+
+
+.hour{
+  font-size: 12px;
+  margin: 0 1% 4% 0;
+
+}
 
 /* right side----------------------------------------------------------------*/
 
@@ -177,7 +197,7 @@ input[type="text"]{
   margin-left: 10%;
 }
 
-.michele{
+.imchattingwith{
   width: 700px;
   margin-right: 52%;
 }
@@ -189,20 +209,37 @@ input[type="text"]{
   margin-top: 70px;
   height: calc(100% - 70px - 70px);
   overflow-y: scroll;
+  /* display: none; */
+  padding-top: 2%;
+}
+
+.message span, .fa-chevron-down{
+  font-size: 14px;
+}
+
+.message .hour{
+  margin-left: 80%;
+  font-size: 10px;
+}
+
+.message{
+  background-color: #dcf8c6;
+  border-radius: 10px;
+  text-align: left;
+  padding: 1.5% 1.5% 0 2%;
 }
 
 .greenmessage{
-  background-color: #dcf8c6;
-  padding: 2%;
-  margin: 4% 10% 2% 65%;
-  border-radius: 10px;
+  margin: 2% 10% 2% 65%;
 }
 
 .whitemessage{
-  background-color: #ffff;
-  padding: 2%;
   margin: 2% 65% 2% 10%;
-  border-radius: 10px;
+  background-color: #ffff;
+}
+
+.greenmessage:hover{
+  display: block;
 }
 
 ul{
@@ -214,6 +251,18 @@ ul{
   line-height: 2;
 }
 
+.mainchat.active{
+  display: block;
+}
+
+.mainchat.ghost, .deletemenu{
+  display: none;
+}
+
+/* i.fa-chevron-down{
+  display: none;
+} */
+
 
 
 /* footerright-------------------------------------------------------------- */
@@ -223,12 +272,13 @@ ul{
 }
 
 .footerright input{
-  padding: 1.5%;
+  padding: 2% 3%;
   margin: 0 4%;
 }
 
 .fa-smile, .fa-paper-plane{
   color:#505050;
+  font-size: 25px;
 }
 
 .footerright{
