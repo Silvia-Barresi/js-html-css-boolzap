@@ -14,18 +14,21 @@ $(document).ready(function(){
 
        // valore input
        var userSend = $('#mytext').val();
+       var today = new Date();
+       var time = today.getHours() + ':' + today.getMinutes();
+
        // stampo il messaggio
-       text.append('<div class="message greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i><span class="hour">15:40</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
+       text.append('<div class="message greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
        // input vuoto
        $('input').val('');
        // dopo un secondo arriva la risposta automatica
        setTimeout(function(){
-        text.append('<div class="message whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i><span class="hour">15:40</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
+        text.append('<div class="message whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
        }, 1000);
 
-     }
+    });
 
-   );
+
 
 // cliccando enter, invio il messaggio------------------------------------------
 

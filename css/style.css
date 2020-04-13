@@ -16,6 +16,9 @@
   background-image: linear-gradient(to bottom, #128c7e 0%, #128c7e 10%, #ece5dd 10%, #e3e1de 100%);
 }
 
+p{
+  font-size: 12px;
+}
 /* debug left side*/
 
 .headerleft{
@@ -89,8 +92,9 @@ i{
 
 .notification{
   background-color: #8EDAFC;
-  height: 85px;
+  height: 80px;
   padding-top: 1%;
+  clear: both;
 }
 
 .fa-bell-slash{
@@ -98,22 +102,23 @@ i{
   border-radius: 100%;
   color: #8EDAFC;
   padding:4% 3%;
-  margin: 2% 0 2% 4%;
+  margin: 2% 4% 2% 4%;
+  float: left;
 }
 
 .note{
-  float: right;
-  margin: 4% 28% 0 0;
-  line-height: 1.5;
+  float: left;
+  padding-top: 4%;
+  width:70%;
 }
 
 h2{
   font-size: 15px;
 }
 
-p{
+.note a{
   font-size: 12px;
-  text-decoration: underline;
+  color: #000;
 }
 
 /* search----------------------------------------------------------------- */
@@ -147,7 +152,7 @@ input[type="text"]{
 /* contacts------------------------------------------------------------------ */
 
 .chatcontacts{
-  height:calc(100% - 70px - 12% - 7%);
+  height:calc(100% - 70px - 80px - 6.5%);
   overflow-y: scroll;
 }
 
@@ -192,14 +197,13 @@ input[type="text"]{
 
 /* right side----------------------------------------------------------------*/
 
-.contactright img{
-  width: 55%;
-  margin-left: 10%;
+.contactright{
+  width: 8%;
 }
 
 .imchattingwith{
-  width: 700px;
-  margin-right: 52%;
+  width:80%;
+  margin-left: 2%;
 }
 
 /* mainchat----------------------------------------------------------------- */
@@ -217,29 +221,30 @@ input[type="text"]{
   font-size: 14px;
 }
 
-.message .hour{
+.message>.hour{
   margin-left: 80%;
   font-size: 10px;
+  padding-bottom: 1.5%;
 }
 
 .message{
   background-color: #dcf8c6;
   border-radius: 10px;
   text-align: left;
-  padding: 1.5% 1.5% 0 2%;
+  clear: both;
+  padding:1.2% 2% 0 2%;
+  max-width: 60%;
+  min-width: 20%;
+  margin: 2%;
 }
 
 .greenmessage{
-  margin: 2% 10% 2% 65%;
+  float: right;
 }
 
 .whitemessage{
-  margin: 2% 65% 2% 10%;
+  float: left;
   background-color: #ffff;
-}
-
-.greenmessage:hover{
-  display: block;
 }
 
 ul{
@@ -259,9 +264,14 @@ ul{
   display: none;
 }
 
-/* i.fa-chevron-down{
-  display: none;
-} */
+i.fa-chevron-down{
+  float: right;
+  visibility: hidden;
+}
+
+.message:hover i.fa-chevron-down{
+  visibility: visible;
+}
 
 
 
@@ -287,3 +297,13 @@ ul{
 
 
 /* fine right side */
+
+
+
+@media all and (max-width:1200px){
+
+  .fa-bell-slash{
+    margin-top: 4%;
+  }
+
+};
