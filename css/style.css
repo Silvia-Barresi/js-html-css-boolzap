@@ -206,6 +206,10 @@ input[type="text"]{
   margin-left: 2%;
 }
 
+.imchattingwith span{
+  color: #000;
+}
+
 /* mainchat----------------------------------------------------------------- */
 
 .mainchat{
@@ -255,6 +259,7 @@ ul{
   padding: 1%;
   line-height: 2;
 }
+
 
 .mainchat.active{
   display: block;
