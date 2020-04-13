@@ -21,11 +21,6 @@ p{
 }
 /* debug left side*/
 
-.headerleft{
-  height: 70px;
-}
-
-
 
 .headerleft,.headerright,.footerright,.searchchat{
   background-color: #EAEAEA;
@@ -69,6 +64,9 @@ p{
 
 /* headerleft ---------- */
 
+.headerleft{
+  height: 70px;
+}
 
 img{
   width: 15%;
@@ -156,6 +154,14 @@ input[type="text"]{
   overflow-y: scroll;
 }
 
+.chatcontacts::-webkit-scrollbar, .mainchat::-webkit-scrollbar{
+  width:8px;
+}
+
+.chatcontacts::-webkit-scrollbar-thumb, .mainchat::-webkit-scrollbar-thumb{
+  background: #B1B1B1;
+}
+
 .contact{
   height: 80px;
   background-color:#f5f5f5;
@@ -204,6 +210,10 @@ input[type="text"]{
 .imchattingwith{
   width:80%;
   margin-left: 2%;
+}
+
+.imchattingwith span{
+  color: #000;
 }
 
 /* mainchat----------------------------------------------------------------- */
@@ -255,6 +265,7 @@ ul{
   padding: 1%;
   line-height: 2;
 }
+
 
 .mainchat.active{
   display: block;

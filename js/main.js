@@ -4,18 +4,17 @@ $(document).ready(function(){
 
 
 // variabili milestone 1
- var text = $('.mainchat');
+ var text = $('.mainchat.active');
  var send = $('.fa-paper-plane');
 
+ var today = new Date();
+ var time = today.getHours() + ':' + today.getMinutes();
 
 // invio un messaggio-----------------------------------------------------------
    send.click(
      function () {
-
        // valore input
        var userSend = $('#mytext').val();
-       var today = new Date();
-       var time = today.getHours() + ':' + today.getMinutes();
 
        // stampo il messaggio
        text.append('<div class="message greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
@@ -26,6 +25,8 @@ $(document).ready(function(){
         text.append('<div class="message whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
        }, 1000);
 
+       // inserisci l'orario dell'ultima visualizzazione e il messaggio sta scrivendo..
+       // $('.imchattingwith > p').text('Sta scrivendo...');
     });
 
 
@@ -134,7 +135,7 @@ $(document).ready(function(){
 
         // come prima ma con l'immagine
         var contactImg = $(this).find('img').attr('src');
-        $('.contactright a img').attr('src', contactImg);
+        $('img.contactright').attr('src', contactImg);
 
         // salvo la conversazione che mi interessa
         var chat = $(this).data('chat');
@@ -142,6 +143,8 @@ $(document).ready(function(){
         // nascondo l'active dalle chat che non mi interessano e la aggiungo a quella su cui clicco
         $('.mainchat').removeClass('active').addClass('ghost');
         $('.mainchat').eq(chat).removeClass('ghost').addClass('active');
+
+        
 
               // ALTERNATIVA MAINCHAT DATA
 
