@@ -53,7 +53,7 @@ $(document).ready(function(){
         var myFriend = $(this).find('h2').text().toLowerCase();
       // se il contatto esiste lo mostro e nascondo gli altri
         if(myFriend.includes(searchcontacts)){
-            $(this).show();
+           $(this).show();
         }else{
            $(this).hide();
          }
@@ -93,7 +93,7 @@ $(document).ready(function(){
     $('.message').on('click','.fa-chevron-down',
         function(){
 
-          $(this).siblings('.deletemenu').toggle();
+          $(this).siblings('.deletemenu').toggle('active');
 
               // ALTERNATIVA AL TOGGLE
 
@@ -145,7 +145,7 @@ $(document).ready(function(){
         $('.mainchat').removeClass('active').addClass('ghost');
         $('.mainchat').eq(chat).removeClass('ghost').addClass('active');
 
-        $('.contact > span').text(time);
+        $('.contact.active > span').text(time);
 
               // ALTERNATIVA MAINCHAT DATA
 

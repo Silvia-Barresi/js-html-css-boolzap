@@ -271,8 +271,16 @@ ul{
   display: block;
 }
 
-.mainchat.ghost, .deletemenu{
+.mainchat.ghost{
   display: none;
+}
+
+.deletemenu{
+  display: none;
+}
+
+.deletemenu.active{
+  display: inline-block;
 }
 
 i.fa-chevron-down{
