@@ -17,18 +17,16 @@ $(document).ready(function(){
        var userSend = $('#mytext').val();
 
        // stampo il messaggio
-       text.append('<div class="message greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
+       $('.mainchat.active').append('<div class="message greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
        // input vuoto
        $('input').val('');
        // dopo un secondo arriva la risposta automatica
        setTimeout(function(){
-        text.append('<div class="message whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
+        $('.mainchat.active').append('<div class="message whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i><span class="hour">'+ time +'</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
        }, 1000);
 
        // inserisci l'orario dell'ultima visualizzazione e il messaggio sta scrivendo..
        // $('.imchattingwith > p').text('Sta scrivendo...');
-
-
 
     });
 
