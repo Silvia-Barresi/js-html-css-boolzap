@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* REGOLE GENERALI */
 
 .container{
   display: flex;
@@ -16,36 +17,23 @@
   background-image: linear-gradient(to bottom, #128c7e 0%, #128c7e 10%, #ece5dd 10%, #e3e1de 100%);
 }
 
-p{
-  font-size: 12px;
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-/* debug left side*/
-
 
 .headerleft,.headerright,.footerright,.searchchat{
   background-color: #EAEAEA;
   border: 1px solid #e0e0e0;
 }
 
-
-/* fine debug left side*/
-
-/* debug right side */
-
 .headerright, .footerright{
   position: fixed;
   overflow: hidden;
   height: 70px;
   width: 50vw;
-}
-
-/* fine debug right side */
-
-.flex{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .left, .right{
@@ -60,7 +48,12 @@ p{
   width:50vw;
 }
 
-/* leftside------------------------------------------------------------------ */
+.contact p, .hour, i{
+  color:#B1B1B1;
+}
+
+
+/* LEFTSIDE------------------------------------------------------------------ */
 
 /* headerleft ---------- */
 
@@ -87,7 +80,6 @@ i{
 
 /* notification----------------------------------- */
 
-
 .notification{
   background-color: #8EDAFC;
   height: 80px;
@@ -110,11 +102,7 @@ i{
   width:70%;
 }
 
-h2{
-  font-size: 15px;
-}
-
-.note a{
+.note a, p{
   font-size: 12px;
   color: #000;
 }
@@ -128,7 +116,7 @@ h2{
   justify-content:center;
 }
 
-.searchchat i{
+.searchchat i, h2{
   font-size: 15px;
 }
 
@@ -168,10 +156,6 @@ input[type="text"]{
   border: 1px solid #e0e0e0;
 }
 
-.contact p, .imchattingwith p{
-  text-decoration: none;
-}
-
 .active{
   background-color: #eaeaea;
 }
@@ -180,25 +164,15 @@ input[type="text"]{
   background-color: #eaeaea;
 }
 
-.contact img{
-  width: 14%;
-}
-
 .nomi{
   width:80%;
   margin-left: 2%;
   line-height: 1.5;
 }
 
-.contact p, .hour, i{
-  color:#B1B1B1;
-}
-
-
 .hour{
   font-size: 12px;
   margin: 0 1% 4% 0;
-
 }
 
 /* right side----------------------------------------------------------------*/
@@ -266,21 +240,12 @@ ul{
   line-height: 2;
 }
 
-
 .mainchat.active{
   display: block;
 }
 
-.mainchat.ghost{
+.mainchat.ghost, .deletemenu{
   display: none;
-}
-
-.deletemenu{
-  display: none;
-}
-
-.deletemenu.active{
-  display: inline-block;
 }
 
 i.fa-chevron-down{
@@ -316,8 +281,6 @@ i.fa-chevron-down{
 
 
 /* fine right side */
-
-
 
 @media all and (max-width:1200px){
 
