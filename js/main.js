@@ -26,30 +26,45 @@ $(document).ready(function(){
     send.click(
      function () {
 
-       // valore input
+       // variabili input e chat
        var userSend = $('#mytext').val();
        var activeChat = $('.mainchat.active');
+       // variabili handlebars messaggio inviato
+       var source = $('#green-template').html();
+       var template = Handlebars.compile(source);
 
+       // se l'input non è vuoto
        if (userSend.length > 0){
-
+         // handlebars operations
+         var context = {"userSendT":userSend,"timeT":time};
+         var html = template(context);
          // stampo il messaggio
-         activeChat.append('<div class="message greenmessage"><span>' + userSend + '</span><i class="fas fa-chevron-down"></i><div class="time"><span class="hour">' + time + '</span></div><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
-         // input vuoto
+         activeChat.append(html);
+         // input vuoto dopo invio
          $('input').val('');
+
          // dopo un secondo arriva la risposta automatica
          setTimeout(function(){
-          activeChat.append('<div class="message whitemessage"><span>' + 'ok' + '</span><i class="fas fa-chevron-down"></i><div class="time"><span class="hour">' + time + '</span><div class="deletemenu"><ul><li>Info messaggio</li><li class="delete">Cancella messaggio</li></ul></div></div>');
+
+           // variabili handlebars messaggio ricevuto
+           var source = $('#white-template').html();
+           var template = Handlebars.compile(source);
+           // handlebars operations
+           var context = {"timeT":time};
+           var html = template(context);
+
+           // stampo il messaggio che arriva dopo un secondo
+           activeChat.append(html);
          }, 1000);
 
+        };
 
-         // modifico l'orario di visualizzazione dei contatti
-          $('.imchattingwith > p span.hour').text(time);
-          $('.contact.active > span').text(time);
+        // modifico l'orario di visualizzazione dei contatti
+         $('.imchattingwith > p span.hour').text(time);
+         $('.contact.active > span').text(time);
 
         // la chat scrolla verso l'ultimo messaggio inviato
           activeChat.scrollTop(activeChat.prop("scrollHeight"));
-
-        };
 
      });
 
@@ -111,10 +126,10 @@ $(document).ready(function(){
 // cancello il messaggio dal menu a tendina-------------------------------------
 
     // al click spunta il menù e al click lo nascondo nuovamente
-    mainChat.on('click','.fa-chevron-down',
+     mainChat.on('click','.fa-chevron-down',
         function(){
 
-          $(this).siblings('.deletemenu').toggle('active');
+          $(this).siblings('.deletemenu').toggle();
 
               // ALTERNATIVA AL TOGGLE
 

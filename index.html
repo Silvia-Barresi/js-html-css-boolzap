@@ -510,8 +510,48 @@
 
     </div>
 
+    <!-- TEMPLATE MESSAGGIO INVIATO-->
+    <script id="green-template" type="text/x-handlebars-template">
+
+      <div class="message greenmessage">
+        <span>{{userSendT}}</span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="time">
+          <span class="hour">{{timeT}}</span>
+        </div>
+        <div class="deletemenu">
+          <ul>
+            <li>Info messaggio</li>
+            <li class="delete">Cancella messaggio</li>
+          </ul>
+        </div>
+      </div>
+
+    </script>
+
+    <!-- TEMPLATE MESSAGGIO RICEVUTO-->
+
+    <script id="white-template" type="text/x-handlebars-template">
+
+      <div class="message whitemessage">
+        <span>ok</span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="time">
+          <span class="hour">{{timeT}}</span>
+        </div>
+        <div class="deletemenu">
+          <ul>
+            <li>Info messaggio</li>
+            <li class="delete">Cancella messaggio</li>
+          </ul>
+        </div>
+      </div>
+
+    </script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
